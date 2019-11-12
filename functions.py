@@ -29,11 +29,17 @@ def computer_choice():
     random_number= random.randrange(50) # choose a random number between 0 and 49
     return random_number
 
-#def user_bet():
-#    bet=-1
-#    while bet<0 :
-#        try:
-#            bet=int(input("enter your bet"))
-#        except ValueError:
-#            print("your enter is not a number")
-#    return bet
+def user_bet():
+    money=100
+    bet=-1
+    while bet<0 :
+        try:
+            bet=int(input("enter your bet"))
+        except ValueError:
+            print("your enter is not a number")
+            bet=-1
+        if bet < 0 :
+            print("your enter is a negative number")
+        if bet > money:
+            print("your enter is biger than your money ")
+    return bet, money
