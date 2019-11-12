@@ -24,10 +24,10 @@ def user_choice():
             print("your enter is not included in range") #display error message  if number is out of range
         return number_choice
 
-#def computer_choice():
-#    """this function makes it possible to randomly select values """
-#    random_number= random.randrange(50) # choose a random number between 0 and 49
-#    return random_number
+def computer_choice():
+    """this function makes it possible to randomly select values """
+    random_number= random.randrange(50) # choose a random number between 0 and 49
+    return random_number
 
 #def user_bet():
 #    bet=-1
