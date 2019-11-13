@@ -8,7 +8,7 @@ def name_choice():
     while username =="": #if value of user is empty the loop continue
         user=input("please enter your name or pseudo")
         return username
-    print("welcome on casino game ",username," !")
+        print("welcome on roulette game ",username," !")
 
 def user_choice():
     """the function allow the player to choose a number between 0 and 49 ,
@@ -22,24 +22,16 @@ def user_choice():
             number_choice = 50 #return in a loop
         if number_choice < 0 or number_choice >49:
             print("your enter is not included in range") #display error message  if number is out of range
-        return number_choice
+    return number_choice
+
 
 def computer_choice():
-    """this function makes it possible to randomly select values """
+    """this function makes it possible to randomly a number """
     random_number= random.randrange(50) # choose a random number between 0 and 49
     return random_number
 
-def user_bet():
-    money=100
-    bet=-1
-    while bet<0 :
-        try:
-            bet=int(input("enter your bet"))
-        except ValueError:
-            print("your enter is not a number")
-            bet=-1
-        if bet < 0 :
-            print("your enter is a negative number")
-        if bet > money:
-            print("your enter is biger than your money ")
-    return bet, money
+def rules():
+    print("you begin the game with 100 € ")
+    print("when you fall on the same number you win 3*bet")
+    print("when you fall on the same color you win bet/2")
+    print("if your are not the same number or same color you loose your bet")
