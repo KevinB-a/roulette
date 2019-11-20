@@ -7,12 +7,12 @@ from functions import *
 rules()
 """starting variable"""
 continue_game=True
-name_choice()
+name_choice() # call the function
 money=100
 print("Hello you have {} € for start the game".format(money))
 while continue_game==True or money==0:
 
-    if money==0:
+    if money==0: # player have no money for continue the game
         continue_game=False
         print("you have no money")
 
@@ -33,16 +33,16 @@ while continue_game==True or money==0:
     user_number=user_choice()
     computer_number=computer_choice()
     if user_number==computer_number:
-        money=money + 2*bet
+        money=money + 2*bet # if number are same player win 3 times bet
         print("you win your money is ",money)
     elif (user_number %2==0 and computer_number %2==0) or (user_number %2==1 and computer_number %2==1):
-        money=money-math.ceil((bet/2))
+        money=money - math.ceil((bet/2)) #round the bet to the superior number
         print("you fall on the same color your money is",money)
     else :
         money=money-bet
         print("you loose you money is ",money)
-    rematch=input("Do you want to play again ? enter yes for rematch or no for quit")
-    if rematch =="yes":
+    rematch=input("Do you want to play again ? enter yes for rematch or no for quit").lower()
+    if rematch in ["yes","y","oui","o"]:
         continue_game=True
     else :
         continue_game=False
