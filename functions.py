@@ -6,7 +6,7 @@ def name_choice():
     """this function allow the player to choose enter a name or pseudo """
     username=""
     while username =="": #if value of user is empty the loop continue
-        user=input("please enter your name or pseudo")
+        username=input("please enter your name or pseudo")
         return username
         print("welcome on roulette game ",username," !")
 
@@ -23,6 +23,7 @@ def user_choice():
         if number_choice < 0 or number_choice >49:
             print("your enter is not included in range") #display error message  if number is out of range
     return number_choice
+
 
 def computer_choice():
     """this function makes it possible to randomly a number """
