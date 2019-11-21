@@ -3,11 +3,15 @@ import random
 import math
 
 from functions import *
+
 """Rules of the game """
+
 rules()
+
 """starting variable"""
+
 continue_game=True
-name_choice() # call the function
+name_choice()
 money=100
 print("Hello you have {} € for start the game".format(money))
 while continue_game==True or money==0:
@@ -33,10 +37,10 @@ while continue_game==True or money==0:
     user_number=user_choice()
     computer_number=computer_choice()
     if user_number==computer_number:
-        money=money + 2*bet # if number are same player win 3 times bet
+        money=money + 2*bet
         print("you win your money is ",money)
     elif (user_number %2==0 and computer_number %2==0) or (user_number %2==1 and computer_number %2==1):
-        money=money - math.ceil((bet/2)) #round the bet to the superior number
+        money=money-math.ceil((bet/2))
         print("you fall on the same color your money is",money)
     else :
         money=money-bet
