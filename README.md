@@ -13,4 +13,4 @@ if your are not the same number or same color you loose your bet.
 when money equal 0 you loose.
 
 this project learn me to manage my time , organize my work, reach of variable
-and file manipulation
+and file manipulation and work in distance
